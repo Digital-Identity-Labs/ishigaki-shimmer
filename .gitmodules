@@ -1,0 +1,3 @@
+[submodule "shib_shim"]
+	path = shib_shim
+	url = git@github.com:Digital-Identity-Labs/shib_shim.git
