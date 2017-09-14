@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+ - 2.4
+sudo: required
+services:
+  - docker
+script:
+  - bundle exec rake test
+after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - bundle exec rake push
