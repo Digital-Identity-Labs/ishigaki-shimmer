@@ -9,3 +9,7 @@ script:
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   - bundle exec rake push
+addons:
+  apt:
+    packages:
+      - docker-ce
