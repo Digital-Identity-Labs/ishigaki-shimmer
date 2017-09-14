@@ -1,3 +1,0 @@
-[submodule "shib_shim"]
-	path = shib_shim
-	url = https://github.com/binaryape/shib_shim.git
