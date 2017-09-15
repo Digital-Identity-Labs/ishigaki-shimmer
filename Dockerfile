@@ -12,7 +12,7 @@ RUN mvn install && \
 
 
 
-FROM digitalidentity/ishigaki:latest
+FROM digitalidentity/ishigaki:0.2.0
 # (Don't use latest in production)
 
 LABEL description="Ishigaki IdP plus a generic external authentication extension" \
@@ -21,6 +21,5 @@ LABEL description="Ishigaki IdP plus a generic external authentication extension
 
 COPY --from=shim_deps /usr/local/src/shib_shim/target /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
 
-## This is an optional script to tidy up file permissions, etc.
-RUN $ADMIN_HOME/prepare_apps.sh
-RUN $ADMIN_HOME/prepare_apps.sh
+## Rebuild the .war file to include the extra .jars
+RUN $ADMIN_HOME/prepare_apps.sh rebuild
