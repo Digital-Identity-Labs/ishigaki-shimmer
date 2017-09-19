@@ -1,3 +1,5 @@
+##
+## Disposable builder image
 FROM maven:3.5.0-jdk-8 as shim_deps
 
 ARG WD=/usr/local/src/shib_shim
@@ -7,16 +9,14 @@ WORKDIR $WD
 COPY pom.xml $WD
 
 RUN mvn install && \
-    rm -rfv target/maven-archiver target/shimmer-1.0-SNAPSHOT.jar && \
-    ls -lR $WD
+    rm -rfv target/maven-archiver target/shimmer-1.0-SNAPSHOT.jar
 
-
-
+##
+## Actual image now
 FROM digitalidentity/ishigaki:0.2.0
-# (Don't use latest in production)
 
 LABEL description="Ishigaki IdP plus a generic external authentication extension" \
-      version="0.0.1" \
+      version="0.0.2" \
       maintainer="pete@digitalidentitylabs.com"
 
 COPY --from=shim_deps /usr/local/src/shib_shim/target /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
