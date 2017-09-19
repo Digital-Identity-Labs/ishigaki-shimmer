@@ -13,7 +13,7 @@ RUN mvn install && \
 
 ##
 ## Actual image now
-FROM digitalidentity/ishigaki:0.2.0
+FROM digitalidentity/ishigaki:latest
 
 LABEL description="Ishigaki IdP plus a generic external authentication extension" \
       version="0.0.2" \
