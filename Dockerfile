@@ -13,10 +13,10 @@ RUN mvn install && \
 
 ##
 ## Actual image now
-FROM digitalidentity/ishigaki:latest
+FROM digitalidentity/ishigaki:0.3.0
 
 LABEL description="Ishigaki IdP plus a generic external authentication extension" \
-      version="0.0.2" \
+      version="0.0.3" \
       maintainer="pete@digitalidentitylabs.com"
 
 COPY --from=shim_deps /usr/local/src/shib_shim/target /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
