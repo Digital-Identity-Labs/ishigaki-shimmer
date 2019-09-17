@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "inspec"
+gem "inspec", ">= 1.30.0"
 gem "rake"
-gem "travis"
+gem "travis", ">= 1.8.8"
 
 
