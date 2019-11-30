@@ -16,7 +16,7 @@ FROM digitalidentity/ishigaki:latest
 # (Don't use latest in production)
 
 LABEL description="Ishigaki IdP plus a generic external authentication extension" \
-      version="0.0.1" \
+      version="0.0.2" \
       maintainer="pete@digitalidentitylabs.com"
 
 COPY --from=shim_deps /usr/local/src/shib_shim/target /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
