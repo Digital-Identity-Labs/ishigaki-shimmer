@@ -1,0 +1,14 @@
+name: ishigaki-shimmer
+title: Ishigaki Shimmer Spec
+maintainer: Digital Identity Ltd
+copyright: Digital Identity Ltd
+copyright_email: info@digitalidentitylabs.com
+license: MIT
+summary: Specs for Ishigaki-Shimmer, based on the Ishigaki-Spec profile
+version: 0.2.0
+supports:
+  - os-name: debian
+  - os-name: macos
+depends:
+ - name: ishigaki
+   git:  https://github.com/Digital-Identity-Labs/ishigaki-spec
