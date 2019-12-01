@@ -472,9 +472,9 @@ PLATFORMS
   x86_64-darwin-16
 
 DEPENDENCIES
-  inspec
+  inspec (>= 1.30.0)
   rake
-  travis
+  travis (>= 1.8.8)
 
 BUNDLED WITH
    1.17.2
