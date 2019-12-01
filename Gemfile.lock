@@ -248,6 +248,8 @@ GEM
       train-winrm (~> 0.2)
       tty-prompt (~> 0.17)
       tty-table (~> 0.10)
+    inspec-bin (4.18.39)
+      inspec (= 4.18.39)
     jmespath (1.4.0)
     json (2.2.0)
     json-schema (2.8.1)
@@ -473,6 +475,7 @@ PLATFORMS
 
 DEPENDENCIES
   inspec (>= 1.30.0)
+  inspec-bin
   rake
   travis (>= 1.8.8)
 
