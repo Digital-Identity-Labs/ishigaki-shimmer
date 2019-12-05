@@ -1,0 +1,15 @@
+name: ishigaki-internal
+title: Bundled Ishigaki specs
+maintainer: Digital Identity Ltd
+copyright: Digital Identity Ltd
+copyright_email: info@digitalidentitylabs.com
+license: MIT
+summary: Basic, common specs (uses external profile)
+version: 0.2.0
+supports:
+  - os-name: debian
+  - os-name: macos
+depends:
+ - name: ishigaki
+   git:  https://github.com/Digital-Identity-Labs/ishigaki-spec
+   version: 0.4.0

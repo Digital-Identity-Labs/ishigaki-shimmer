@@ -10,5 +10,6 @@ supports:
   - os-name: debian
   - os-name: macos
 depends:
- - name: ishigaki
-   git:  https://github.com/Digital-Identity-Labs/ishigaki-spec
+  - name: ishigaki
+    git:  https://github.com/Digital-Identity-Labs/ishigaki-spec
+    version: 0.4.0

@@ -1,10 +1,11 @@
 language: ruby
 rvm:
- - 2.4.1
+ - 2.6
 sudo: required
 services:
   - docker
 script:
+  - bundle install
   - bundle exec rake test
 after_success:
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
